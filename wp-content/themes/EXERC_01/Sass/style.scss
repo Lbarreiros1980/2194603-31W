@@ -1,0 +1,30 @@
+/*!
+Theme Name: 31W - Lidia Barreiros
+Theme URI: http://underscores.me/
+Author: Lidia B.
+Author URI: https://github.com/Lbarreiros1980
+Description: Thème pour le cours
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: _31w
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+*/
+
+/* Importation des variables */
+@import "variables/colors";
+@import "variables/typography";
+
+@import "generic/box-sizing";
+@import "generic/normalize";
+
+@import "base/elements/body";
+@import "base/elements/buttons";
+@import "base/elements/fields";
+
+@import "base/typography/copy";
+@import "base/typography/headings";
+@import "base/typography/typography";
