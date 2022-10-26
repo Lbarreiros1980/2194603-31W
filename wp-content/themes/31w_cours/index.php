@@ -34,8 +34,9 @@ get_header();
 			
 			<pre><?php the_category(); ?></pre>
 			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink() ?></pre>
-			<pre><?php the_author() ?></pre>
+			<pre><?php the_permalink();  ?></pre>
+			<pre><?php the_author(); ?></pre>
+
 <?php
 			endwhile;
 			endif;	
@@ -43,3 +44,4 @@ get_header();
 	</main><!-- #main -->
 <?php
 get_footer();
+

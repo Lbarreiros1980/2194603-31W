@@ -13,8 +13,8 @@ License URI: LICENSE
 Text Domain: _31w
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-*/
 /* Importation des variables */
+/* Normalize */
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -336,6 +336,7 @@ template {
   display: none;
 }
 
+/* Éléments de base */
 body {
   background: #fff;
 }
@@ -442,7 +443,7 @@ pre {
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em;
+  padding: 0.5em;
 }
 
 code,
@@ -468,84 +469,103 @@ big {
   font-size: 125%;
 }
 
-h1,
+h1 {
+  font-size: clamp(1rem, 5vw, 7rem);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  clear: both;
+  font-family: trebuchet;
 }
 
-body,
-button,
-input,
-select,
-optgroup,
-textarea {
-  color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+h2 {
+  font-size: clamp(0.9rem, 4vw, 4rem);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h3 {
+  font-size: clamp(0.9rem, 3vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(0.8rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(0.7rem, 3vw, 2rem);
+}
+
 h6 {
-  clear: both;
+  font-size: clamp(0.6rem, 2vw, 2rem);
 }
 
-p {
-  margin-bottom: 1.5em;
+/* Composants */
+.menu__primaire {
+  display: flex;
+  justify-content: flex-end;
 }
 
-dfn,
-cite,
-em,
-i {
-  font-style: italic;
+.menu__primaire .menu {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 12%;
+  flex: 1;
+  list-style-type: none;
 }
 
-blockquote {
-  margin: 0 1.5em;
+.menu__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-address {
-  margin: 0 0 1.5em;
+.menu__aside .menu {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0 0 0 1rem;
 }
 
-pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", courier, monospace;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
-
-abbr,
-acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
-}
-
-mark,
-ins {
-  background: #fff9c0;
+.menu__aside .menu-item a {
   text-decoration: none;
+  padding: 3px 4px;
 }
 
-big {
-  font-size: 125%;
-}/*# sourceMappingURL=style.css.map */
+/* Layout */
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "sidebar" "main" "footer";
+}
+@media screen and (min-width: 700px) {
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
+}
+
+.site__header {
+  grid-area: header;
+  background-color: rgb(175, 159, 194);
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  background-color: #ccc;
+}
+
+.site__sidebar {
+  grid-area: sidebar;
+  background-color: rgb(201, 206, 215);
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: #bbb;
+}
+
+/* // @import "no-sidebar"; *//*# sourceMappingURL=style.css.map */

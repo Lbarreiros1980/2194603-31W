@@ -48,11 +48,14 @@ function igc31w_setup() {
 	// add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
+
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'igc31w' ),
+			'principal' => esc_html__( 'Principal', 'igc31w' ),
+			'footer' =>esc_html__( 'Footer', 'igc31w' ),
 		)
 	);
+	
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -193,3 +196,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 */
 
+
+function igc31w_filtre_choix_menu($obj_menu, $arg){
+    //echo "/////////////////  obj_menu";
+    // var_dump($obj_menu);
+    //  echo "/////////////////  arg";
+    //  var_dump($arg);
+ 
+    if ($arg->menu == "sidebar"){
+    foreach($obj_menu as $cle => $value)
+    {
+      //  print_r($value);
+       //$value->title = substr($value->title,7);
+       $value->title = wp_trim_words($value->title,3,"...");
+        //echo $value->title . '<br>';
+     } 
+    }
+    //die();
+    return $obj_menu;
+}
+add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);

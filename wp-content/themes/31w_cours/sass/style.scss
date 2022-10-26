@@ -12,19 +12,25 @@ License URI: LICENSE
 Text Domain: _31w
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-*/
-
 /* Importation des variables */
 @import "variables/colors";
 @import "variables/typography";
+@import "variables/structure";
 
+/* Normalize */
 @import "generic/box-sizing";
 @import "generic/normalize";
 
+/* Éléments de base */
 @import "base/elements/body";
 @import "base/elements/buttons";
 @import "base/elements/fields";
-
 @import "base/typography/copy";
 @import "base/typography/headings";
-@import "base/typography/typography";
+
+/* Composants */
+@import "composants/nav_primaire";
+@import "composants/nav_aside";
+
+/* Layout */
+@import "layout/sidebar-content";
