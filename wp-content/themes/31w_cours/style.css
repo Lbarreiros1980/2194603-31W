@@ -549,18 +549,18 @@ h6 {
 
 .site__header {
   grid-area: header;
-  background-color: rgb(175, 159, 194);
+  background-color: #BBE6E4;
 }
 
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-  background-color: #ccc;
+  background-color: #F0F6F6;
 }
 
 .site__sidebar {
   grid-area: sidebar;
-  background-color: rgb(201, 206, 215);
+  background-color: #42BFDD;
 }
 
 .site__footer {
