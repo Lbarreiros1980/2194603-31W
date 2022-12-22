@@ -1,0 +1,26 @@
+a {
+	display: block;
+	font-family: $font__link;
+	color: $color__link;
+	text-decoration: none;
+	transition: 200ms ease-in-out;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
