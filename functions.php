@@ -305,7 +305,7 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'            => 'college-adress',
-			'name'          => __( 'Sidear college-adress' ),
+			'name'          => __( 'Sidebar college-adress' ),
 			'description'   => __( 'Un deuxième  sidebar de footer.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
@@ -316,7 +316,7 @@ function my_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'            => 'logo',
-			'name'          => __( 'Sidear logo' ),
+			'name'          => __( 'Sidebar logo' ),
 			'description'   => __( 'logo sidebar.' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
