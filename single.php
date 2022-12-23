@@ -15,29 +15,17 @@
 get_header();
 
 ?>
+<h1>single.php</h1>
 	<main class="site__main">
-		<code>index.php</code>
+
 		<?php
 		if ( have_posts() ) :
 			/* Start the Loop */
-			while ( have_posts() ) :
 				the_post(); ?>
+				<?php the_post_thumbnail( 'miniature' );?>
+				<?php the_post_thumbnail( 'full' );?>
 			<h1><?= get_the_title(); ?></h1>
-
-			<?php the_content();
-			$le_permalien = "<a href='" . get_the_permalink() . "'>Suite</a>";
-			?>
-			
-			<h2><?= get_the_title(); ?></h2>
-			<blockquote><?= wp_trim_words(get_the_excerpt(),5, $le_permalien); ?></blockquote>
-			
-			<pre><?php the_category(); ?></pre>
-			<pre><?php the_date(); ?></pre>
-			<pre><?php the_permalink();  ?></pre>
-			<pre><?php the_author(); ?></pre>
-
-<?php
-			endwhile;
+			<?php the_content();		
 			endif;	
 		?>
 	</main><!-- #main -->
