@@ -13,10 +13,10 @@
 	<footer  class="site-footer" >
 	
 		<div class="footer__logo">
-			<?= get_sidebar(  'logo' ); ?>
+			<?= get_sidebar(  'college-adress' ); ?>
 		</div>
 
-		<?= get_sidebar( 'recherche' ); ?>
+		<?= get_sidebar( 'search-bar' ); ?>
 
 		
     </footer><!-- end of .site-footer -->
