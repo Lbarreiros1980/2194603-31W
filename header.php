@@ -18,11 +18,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
- <!-- CUSTOMIZER !!!  -->
- <style> 
-	// 	.site__header { 
-	// 		background-color:<?= get_theme_mod("site__title__background"); ?>;} /* get_theme_mod prends la variable de ce qu'on veut changer - ici le client peux changer le background color du HEADER */
-</style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -45,7 +40,7 @@
 			<?php
 		
 			if ( is_front_page() && is_home() ) :
-				// get_template_part( 'template-parts/header__section', "" );
+				 //get_template_part( 'template-parts/header__section', "" );
 				?>
 				<div class="site__title"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
 				<?php
@@ -63,18 +58,19 @@
 	</header><!-- #masthead -->
 
 	<aside class="site__menu">
-		<div class="site__header">
-		<input type="checkbox" id="chkBurger" class="chkBurger">
-		<label for="chkBurger" class="burger">
-			<code>&#10148;</code>
-		</label>
-		<h3>Cours</h3>
+		<div class="site__menu__header">
+			<input type="checkbox" id="chkBurger" class="chkBurger">
+			<label for="chkBurger" class="burger">
+				<code>&#10148;</code>
+			</label>
+			<h2>Cours</h2>
+		</div>
 	<?php 
 		wp_nav_menu(array(
 			"menu" => "aside",
 			"container"=> "nav",
 			"container_class"=> "menu__aside",
-		))
+		));
 	?>
 	</aside> <!-- site__menu -->
 
@@ -83,6 +79,6 @@
 			<?= get_sidebar( 'calendar' ); ?>
 			<?= get_sidebar( 'image' ); ?>
 			<?= get_sidebar( 'video' ); ?>
-            <?= get_sidebar( 'college-adress' ); ?>
+            <?= get_sidebar( 'social-icons' ); ?>
 
 	</aside> <!-- site__sidebar -->
