@@ -1,0 +1,20 @@
+
+.site-footer {
+	padding: 40px;
+	display: flex;
+	justify-content: space-between;
+	color: #ffffff;
+  
+  }
+  .site-footer a, .site-footer a:visited {
+	color: #ffffff;
+  }
+  .site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+	color: #ffa07a;
+  }
+  .site-footer > div {
+	width: 25%;
+  }
+  .site-footer .footer__logo {
+	min-width: max-content;
+  }

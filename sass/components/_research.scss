@@ -1,0 +1,40 @@
+.research{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.research_texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.research_texte h4{
+    margin: 0;
+}
+
+.research > blockquote{
+    margin: 0;
+}
+
+.research a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.research-header > h2{
+    margin: 0;
+}
+
+.research-header > small{
+    font-size: 20px;
+}
+
+.research-header{
+    margin-bottom: 50px;
+}
+

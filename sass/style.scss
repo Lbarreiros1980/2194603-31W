@@ -19,19 +19,16 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 @import "generic/normalize";
 
 /* Éléments de base */
+@import "base/base";
 @import "base/elements/body";
 @import "base/elements/buttons";
 @import "base/elements/fields";
 @import "base/typography/copy";
 @import "base/typography/headings";
 
-/* Composants */
-@import "composants/nav_primaire";
-@import "composants/nav_aside";
-@import "composants/nav_evenement";
-@import "composants/grille_accueil";
-@import "composants/sidebar";
-@import "composants/footer";
+/* Components */
+@import "components/components";
+
 
 /* Layout */
-@import "layout/sidebar-content";
+@import "layout/sidebar/sidebar-content";
