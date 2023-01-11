@@ -27,7 +27,6 @@
  
 	<header id="masthead" class="site__header">
 	<?php 
-		the_custom_logo();
 		wp_nav_menu(array(
 			"menu" => "primaire",
 			"container"=> "nav",
@@ -35,12 +34,11 @@
 		))
 
 	?>
-	
 		<div class="site__branding">
 			<?php
-		
+				the_custom_logo();
 			if ( is_front_page() && is_home() ) :
-				 //get_template_part( 'template-parts/header__section', "" );
+				 get_template_part( 'template-parts/header__section', "" );
 				?>
 				<div class="site__title"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
 				<?php
@@ -75,6 +73,7 @@
 	</aside> <!-- site__menu -->
 
 	<aside class="site__sidebar">
+
 			<h6>Calendrier</h6>
 			<?= get_sidebar( 'calendar' ); ?>
 			<?= get_sidebar( 'image' ); ?>
