@@ -2,25 +2,25 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
+ 
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package underscore
  */
-
 ?>
-	<footer  class="site-footer" >
-	
-		<div class="footer__logo">
-			<?= get_sidebar(  'college-adress' ); ?>
-		</div>
+  <footer class="site-footer">
 
-		<?= get_sidebar( 'search-bar' ); ?>
+    <div class="footer__logo">
+        <h4>WP 31w cours</h4>
+        <?= get_sidebar( 'adress' ); ?>
+        <?= get_sidebar( 'logo' ); ?>
+    </div>
 
+	 <?= get_sidebar( 'search-bar' ); ?>
 		
-    </footer><!-- end of .site-footer -->
-</div><!-- #page -->
+  </footer><!-- end of .site-footer -->
+</div><!-- end of page -->
 
 <?php wp_footer(); ?>
 
