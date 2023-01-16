@@ -3,7 +3,7 @@
 Theme Name: 31W - Lidia Barreiros
 Theme URI: http://underscores.me/
 Author: Lidia B.
-Author URI: https://github.com/Lbarreiros1980
+Author URI: https://github.com/Lbarreiros1980/
 Description: Thème pour le cours
 Version: 1.0.0
 Tested up to: 5.4
@@ -20,16 +20,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /* Normalize */
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
-html {
-  box-sizing: border-box;
-  line-height: 1.15;
-}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -41,8 +32,15 @@ html {
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  
 }
+
+/**
+ * Remove all margins and paddings to every element
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
 /* Sections
 	 ========================================================================== */
@@ -566,6 +564,7 @@ h6 {
 }
 .site__title a {
 color: white;
+text-decoration: none;
 }
 .site__title p {
   font-size: 1.25em;
@@ -589,7 +588,7 @@ color: white;
 /* Menu Evenement
 --------------------------------------------- */
 
-.evenement .menu {
+.menu__evenement .menu {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -597,12 +596,12 @@ color: white;
   list-style-type: none;
 }
 
-.evenement .menu-item {
+.menu__evenement .menu-item {
   flex: 0 1 200px;
   display: flex;
 }
 
-.evenement .menu-item a {
+.menu__evenement .menu-item a {
   flex: 1;
   font-weight: 600;
   padding: 20px;
@@ -640,9 +639,8 @@ color: white;
    gap: 18px;
 }
 
-.grille_article {
-  flex: 0 1 350px;
-
+.grille__article {
+  flex: 0 1 400px;
 }
 
 /* Footer
@@ -772,8 +770,7 @@ color: white;
 
 .menu__aside .menu-item a {
   text-decoration: none;
-  padding: 8px 8px;
-  color: #fff;
+  color: #30393a;
   font-family: Roboto,sans-serif;
   font-size: 16px;
 }
@@ -823,8 +820,8 @@ color: white;
   font-weight: 500;
   font-size: 3rem;
   padding-top: 10px;
-   
-}*/
+   */
+
 .site__main {
   grid-area: main;
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
